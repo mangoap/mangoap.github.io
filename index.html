@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<style> 
+		body {
+	    	background: url("bgimage.png");
+	    	max-width:100%;
+			max-height:100%;
+	 		background-position: center center;
+	 		background-repeat: no-repeat;
+	    	background-size: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		if (screen.width <= 1000) {
+			document.location = "mobile.html";
+		}
+	</script>
+	<head>
+		<link rel="apple-touch-icon" sizes="57x57" href="apple57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="apple72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="apple114.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="apple144.png" />
+		<link rel="mask-icon" href="MangoApps.svg" color="red">
+
+		<title>Mango Apps</title>
+		<link rel="stylesheet" type="text/css" href="./dist/css/bootstrap.css">
+		<script type="text/javascript" src="./dist/js/jquery.js"></script>
+		<script type="text/javascript" src="./dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="./dist/js/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="./dist/js/index.js"></script>
+		<script>
+	  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  		ga('create', 'UA-62880550-1', 'auto');
+	  		ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<div class="navbar">
+		  <ul class="nav-justified", textalign="center" text-color="#ffffff">
+		  	<li><a href="index.html"><img height="60" width="60" src="./dist/img/MangoApps4.png"></a></li>
+		    <li><a href="About.html">About Us</a></li>
+		    <li><a href="AllApps.html">All Apps</a></li>
+		    <li><a href="contact.html">Contact Us</a></li>
+		    <li><a href="https://mangoappsblog.wordpress.com" target="_blank">Blog</a></li>
+		  </ul>
+		</div>
+
+			<!-- Carousel
+	================================================== -->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+				  <a href="bestBlogs.html"><img style="display: block; margin-right: auto; margin-left: auto; height: 80%; width: 100%; position: relative; top: 0; left: 0;" src="./dist/img/blogsMain2.png "></a> 
+				  <div class="container" align="center" ><a href="https://itunes.apple.com/us/app/best-blogs/id944818291?mt=8"><img style="position: absolute; top: 100px; left: 100px;" align="center" height="75" src="./dist/img/appStore.png"></a></div>
+				</div>
+
+				<div class="item">
+				   <a href="helpcomm.html"><img style="display: block; margin-right: auto; margin-left: auto; height: 741px; width: 100%;" src="./dist/img/helpcommlist copy.png"></a>
+				</div>
+				<!-- 769px -->
+			</div>
+		</div>
+
+		<script>
+		$('#myCarousel').carousel({
+			interval: 4000
+		})
+		</script>
+	</body>
+</html>

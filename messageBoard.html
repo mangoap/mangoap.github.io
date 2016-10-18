@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+    <script>
+    var message;
+    var color;
+    var refresh;
+
+
+    var resultText = "";
+    var colorText = "";
+
+    var myFirebaseRef = new Firebase("https://pimessageboard.firebaseio.com"); 
+    var myFirebaseRef2 = new Firebase("https://pimessageboard.firebaseio.com/refresh"); 
+
+    
+    
+    myFirebaseRef.child("message").on("value", function(snapshot) {
+      //alert(snapshot.val());  // Alerts "San Francisco"
+      message = snapshot.val();
+      resultText += "<p>" + message + "</p>"
+      document.getElementById("message").innerHTML=resultText;
+
+    });
+    myFirebaseRef.child("color2").on("value", function(snapshot) {
+      //alert(snapshot.val());  // Alerts "San Francisco"
+      color = snapshot.val();
+      colorText += "<p>" + color + "</p>"
+      document.getElementById("color").innerHTML=colorText;
+      document.body.style.background = color;
+
+    });
+    myFirebaseRef.child("refresh").on("value", function(snapshot) {
+      //alert(snapshot.val());  // Alerts "San Francisco"
+      refresh = snapshot.val();
+      console.log(refresh);
+
+    });
+    setInterval(function () {if (refresh == "1"){
+      myFirebaseRef2.set("2");
+      refresh = "2";
+      window.location.reload();
+    }}, 3000);
+
+    </script>
+  </head>
+  <body>
+      <!--<META HTTP-EQUIV="refresh" CONTENT="30">-->
+      <center><p style="font-size:60;"><a id="message" href = messageBoard.html></a></p></center>
+      <center><p style="font-size:0px;"><a id="color" href = messageBoard.html></a></p></center>
+  </body>
+</html>
